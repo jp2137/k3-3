@@ -11,15 +11,16 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val text1 = findViewById<EditText>(R.id.edittext1).text.toString()
         val but1 = findViewById<Button>(R.id.button1)
         val but2 = findViewById<Button>(R.id.button2)
         val etykieta1 = findViewById<TextView>(R.id.textView1)
         val etykieta2 = findViewById<TextView>(R.id.textView2)
         val textEtykiety1 = etykieta1.text.toString()
-        val textEtykiety2 = etykieta1.text.toString()
+
         but1.setOnClickListener {
-            etykieta1.text = textEtykiety1 + text1
+            val text1 = findViewById<EditText>(R.id.edittext1).text.toString()
+            //val textEtykiety2 = etykieta1.text.toString()
+            etykieta2.text = etykieta2.text.toString() + text1
         }
         but2.setOnClickListener {
             etykieta1.text = "Giovanni"
